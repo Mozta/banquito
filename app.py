@@ -29,6 +29,7 @@ def validar_monto(monto):
 
 
 def validar_usuario(username, password):
+    print(f"CREDENCIALES: {username} - {password}")
     # TODO: Implementa la logica de validacion auth -> BD
     return True
 
@@ -39,8 +40,9 @@ def login():
     password = request.json.get('password', None)
     if validar_usuario(username, password):
         access_token = create_access_token(identity=username)
-        return jsonify(access_token), 200
+        return jsonify({'token': access_token}), 200
     return jsonify({"mensaje": "Credencias incorrectas"}), 401
+
 
 @app.route('/crear_cuenta', methods=['POST'])
 def crear_cuenta():

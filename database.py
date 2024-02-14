@@ -68,8 +68,8 @@ class DB:
         self.cur.close()
 
 
-db = DB()
-# db.crear_cuenta()
-db.mostrar_cuentas()
-db.actualizad_saldo(2, 100)
-db.mostrar_cuentas()
+# db = DB()
+# # db.crear_cuenta()
+# db.mostrar_cuentas()
+# db.actualizad_saldo(2, 100)
+# db.mostrar_cuentas()
